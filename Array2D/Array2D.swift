@@ -11,7 +11,8 @@ public struct Array2D<T> {
   public init(columns: Int, rows: Int, initialValue: T) {
     self.columns = columns
     self.rows = rows
-    array = .init(count: rows*columns, repeatedValue: initialValue)
+    //array = .init(count: rows*columns, repeatedValue: initialValue)
+    array = Array(repeating: initialValue, count: rows*columns)
   }
 
   public subscript(column: Int, row: Int) -> T {
